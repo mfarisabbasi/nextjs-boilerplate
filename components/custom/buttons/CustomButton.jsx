@@ -15,6 +15,7 @@ const CustomButton = ({
   onClick,
   loading,
   isBack,
+  wFull,
 }) => {
   return (
     <>
@@ -27,7 +28,9 @@ const CustomButton = ({
             hoverTextColor ? hoverTextColor : "hover:text-primary"
           } ${borderColor ? borderColor : "border-primary"} ${
             hoverBorderColor ? hoverBorderColor : "border-primary"
-          } border transition duration-500 py-2 px-4 rounded-2xl`}
+          } border transition duration-500 py-2 px-4 rounded-2xl ${
+            wFull ? "w-full" : ""
+          }`}
         >
           {loading ? (
             <div className="flex justify-center items-center">
@@ -49,7 +52,9 @@ const CustomButton = ({
             hoverTextColor ? hoverTextColor : "hover:text-primary"
           } ${borderColor ? borderColor : "border-primary"} ${
             hoverBorderColor ? hoverBorderColor : "border-primary"
-          } border transition duration-500 py-2 px-4 rounded-2xl`}
+          } border transition duration-500 py-2 px-4 rounded-2xl ${
+            wFull ? "w-full" : ""
+          }`}
         >
           {label}
         </Link>

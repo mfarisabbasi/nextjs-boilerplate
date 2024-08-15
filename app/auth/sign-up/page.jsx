@@ -8,7 +8,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { useRouter } from "next/navigation";
 import { useToast } from "@/components/ui/use-toast";
@@ -18,6 +17,7 @@ import { Form } from "@/components/ui/form";
 import { SignupValidation } from "@/lib/validations/auth_validations";
 import CustomFormField from "@/components/custom/inputs/CustomFormField";
 import Link from "next/link";
+import CustomButton from "@/components/custom/buttons/CustomButton";
 
 const SignupPage = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -111,7 +111,12 @@ const SignupPage = () => {
               </div>
             </CardContent>
             <CardFooter>
-              <Button className="w-full">Sign up</Button>
+              <CustomButton
+                type="button"
+                label="Sign up"
+                loading={isLoading}
+                wFull={true}
+              />
             </CardFooter>
           </form>
         </Form>

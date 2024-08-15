@@ -8,7 +8,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { useRouter } from "next/navigation";
 import { useToast } from "@/components/ui/use-toast";
@@ -19,6 +18,7 @@ import { LoginValidation } from "@/lib/validations/auth_validations";
 import CustomFormField from "@/components/custom/inputs/CustomFormField";
 import Link from "next/link";
 import userStore from "@/stores/userStore";
+import CustomButton from "@/components/custom/buttons/CustomButton";
 
 const SigninPage = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -105,7 +105,12 @@ const SigninPage = () => {
               </div>
             </CardContent>
             <CardFooter>
-              <Button className="w-full">Sign in</Button>
+              <CustomButton
+                type="button"
+                label="Sign in"
+                loading={isLoading}
+                wFull={true}
+              />
             </CardFooter>
             <div className="pb-2">
               <Link href="/auth/forgot-password">
