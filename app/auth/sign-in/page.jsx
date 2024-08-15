@@ -18,9 +18,12 @@ import { Form } from "@/components/ui/form";
 import { LoginValidation } from "@/lib/validations/auth_validations";
 import CustomFormField from "@/components/custom/inputs/CustomFormField";
 import Link from "next/link";
+import userStore from "@/stores/userStore";
 
 const SigninPage = () => {
   const [isLoading, setIsLoading] = useState(false);
+
+  const setUser = userStore((state) => state.setUser);
 
   const router = useRouter();
   const { toast } = useToast();
@@ -52,7 +55,7 @@ const SigninPage = () => {
         description: "Logged in successfully",
         className: "bg-primary text-white",
       });
-
+      setUser(data.user);
       router.refresh();
     } else {
       toast({
