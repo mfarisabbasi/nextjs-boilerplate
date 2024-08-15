@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
+This is a [Next.js](https://nextjs.org/) boilerplate to help you build projects faster.
 ## Getting Started
 
-First, run the development server:
+First, clone this repo and run:
 
 ```bash
+npm install --force
+```
+
+then create a new env file and add the following:
+```bash
+MONGO_URI = YOUR_URI
+JWT_SECRET = YOUR_SECRET
+```
+
+finally run:
+```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Features
+1. Mongodb setup
+2. Authentication: Sigin/Signup with email and password. (more coming soon)
+3. Cookies & Middleware for Authorization.
+4. Basic profile and signout function.
+5. State management with zustand.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Components
+1. Custom button
+2. Custom form Field
 
-## Learn More
+## Stack
+1. NextJS
+2. MongoDB
+3. Tailwindcss
+4. Shadcn-ui
+5. Zustand
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+I'll try to add more features but I can't promise ;)
